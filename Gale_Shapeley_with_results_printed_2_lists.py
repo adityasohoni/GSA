@@ -72,7 +72,7 @@ def allot(i):
         if stl[i].pref[stl[i].tba][0]<=4:
             for x in seats[stl[i].pref[stl[i].tba][0]][stl[i].pref[stl[i].tba][1]].ids[0] :
                 if stl[x].adv_rank>stl[i].adv_rank:
-                    seats[stl[i].pref[stl[i].tba][1]][stl[i].pref[stl[i].tba][2]].ids[0].insert(j, i)
+                    seats[stl[i].pref[stl[i].tba][0]][stl[i].pref[stl[i].tba][1]].ids[0].insert(j, i)
                     flag=1
                     seats[stl[i].pref[stl[i].tba][0]][stl[i].pref[stl[i].tba][1]].vac_seats[0]-=1
                     break
@@ -80,7 +80,7 @@ def allot(i):
         else:
             for x in seats[stl[i].pref[stl[i].tba][0]][stl[i].pref[stl[i].tba][1]].ids[0] :
                 if stl[x].main_rank>stl[i].main_rank:
-                    seats[stl[i].pref[stl[i].tba][1]][stl[i].pref[stl[i].tba][2]].ids[0].insert(j, i)
+                    seats[stl[i].pref[stl[i].tba][0]][stl[i].pref[stl[i].tba][1]].ids[0].insert(j, i)
                     flag=1
                     seats[stl[i].pref[stl[i].tba][0]][stl[i].pref[stl[i].tba][1]].vac_seats[0]-=1
                     break
@@ -108,7 +108,7 @@ def allot(i):
             if stl[i].pref[stl[i].tba][0]<=4:
                 for x in seats[stl[i].pref[stl[i].tba][0]][stl[i].pref[stl[i].tba][1]].ids[stl[i].cat] :
                     if stl[x].adv_rank>stl[i].adv_rank:
-                        seats[stl[i].pref[stl[i].tba][1]][stl[i].pref[stl[i].tba][2]].ids[stl[i].cat].insert(j, i)
+                        seats[stl[i].pref[stl[i].tba][0]][stl[i].pref[stl[i].tba][1]].ids[stl[i].cat].insert(j, i)
                         flag=1
                         seats[stl[i].pref[stl[i].tba][0]][stl[i].pref[stl[i].tba][1]].vac_seats[stl[i].cat]-=1
                         break
